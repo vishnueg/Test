@@ -1,0 +1,399 @@
+{
+  "kubeone_api": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "endpoint": "string"
+      }
+    ],
+    "value": {
+      "endpoint": "testkube-api-lb-533150091.eu-north-1.elb.amazonaws.com"
+    }
+  },
+  "kubeone_hosts": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "control_plane": [
+          "object",
+          {
+            "bastion": "string",
+            "bastion_port": "number",
+            "bastion_user": "string",
+            "cloud_provider": "string",
+            "cluster_name": "string",
+            "hostnames": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "private_address": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "ssh_agent_socket": "string",
+            "ssh_port": "number",
+            "ssh_private_key_file": "string",
+            "ssh_user": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "control_plane": {
+        "bastion": "13.51.171.156",
+        "bastion_port": 22,
+        "bastion_user": "ubuntu",
+        "cloud_provider": "aws",
+        "cluster_name": "testkube",
+        "hostnames": [
+          "ip-172-31-201-55.eu-north-1.compute.internal",
+          "ip-172-31-202-151.eu-north-1.compute.internal",
+          "ip-172-31-203-104.eu-north-1.compute.internal"
+        ],
+        "private_address": [
+          "172.31.201.55",
+          "172.31.202.151",
+          "172.31.203.104"
+        ],
+        "ssh_agent_socket": "env:SSH_AUTH_SOCK",
+        "ssh_port": 22,
+        "ssh_private_key_file": "",
+        "ssh_user": "ubuntu"
+      }
+    }
+  },
+  "kubeone_static_workers": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "workers1": [
+          "object",
+          {
+            "bastion": "string",
+            "bastion_port": "number",
+            "bastion_user": "string",
+            "hostnames": [
+              "tuple",
+              []
+            ],
+            "private_address": [
+              "tuple",
+              []
+            ],
+            "ssh_agent_socket": "string",
+            "ssh_port": "number",
+            "ssh_private_key_file": "string",
+            "ssh_user": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "workers1": {
+        "bastion": "13.51.171.156",
+        "bastion_port": 22,
+        "bastion_user": "ubuntu",
+        "hostnames": [],
+        "private_address": [],
+        "ssh_agent_socket": "env:SSH_AUTH_SOCK",
+        "ssh_port": 22,
+        "ssh_private_key_file": "",
+        "ssh_user": "ubuntu"
+      }
+    }
+  },
+  "kubeone_workers": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "testkube-eu-north-1a": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "testkube-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "testkube-eu-north-1b": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "testkube-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "testkube-eu-north-1c": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "assignPublicIP": "bool",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "ebsVolumeEncrypted": "bool",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "isSpotInstance": "bool",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "testkube-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "testkube-eu-north-1a": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a8ab5e0a29e8173",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-north-1a",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "testkube-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-north-1",
+            "securityGroupIDs": [
+              "sg-0c7dec83f010dd08a"
+            ],
+            "subnetId": "subnet-0cb4205d281d02790",
+            "tags": {
+              "testkube-workers": ""
+            },
+            "vpcId": "vpc-d35dcbba"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWy58J+rzhdUMYSIrmfcgYG0Jaj+bU2EilfErMKcRYOTogNvb42YUWMXp6QtGL+4Jrc/YecHQ7yof8gThY/hjWZHln6ra2X5+cogAaFaemM99Damw/6Gq5hXYcYvR92E54GjSqhbGpLsiqoDwgiyCqDrtWsI+zbytOP5Mcs5ziVsFGznhfhZRsr7RKZ2P54O1dFyB3s+WYKij7Nu4ENuaDbcZWKM6Ih5JndN5V5IAz31vX3EqtnvCamsv+B0/JrhLSBKao6HFUOZBvJBZiXWGViVRkcfYpPLtuf3kl6BH4lwKR5HF4ee09MiUgH92jaD/oJNNSAy6cI/w6WdD+zLZSm1X1kcKvd7ckYRncha5FstrjkpCNDeWeypEBNiAJDlE+X7zXngRpxYTgpBhXxv60Qe/dSaO28JDZX4UEC3X50BQQKCuG/PKV9EGQRo6zfJWs9N5CuuDNJ+tl1G4Ta883bk9+6BJa/viqYuJzk0/csp7RLRyHakqZTM7nUw8KPzU= vishnu@Ubuntu"
+          ]
+        },
+        "replicas": 1
+      },
+      "testkube-eu-north-1b": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a8ab5e0a29e8173",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-north-1b",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "testkube-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-north-1",
+            "securityGroupIDs": [
+              "sg-0c7dec83f010dd08a"
+            ],
+            "subnetId": "subnet-0460bb06d839cdb8c",
+            "tags": {
+              "testkube-workers": ""
+            },
+            "vpcId": "vpc-d35dcbba"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWy58J+rzhdUMYSIrmfcgYG0Jaj+bU2EilfErMKcRYOTogNvb42YUWMXp6QtGL+4Jrc/YecHQ7yof8gThY/hjWZHln6ra2X5+cogAaFaemM99Damw/6Gq5hXYcYvR92E54GjSqhbGpLsiqoDwgiyCqDrtWsI+zbytOP5Mcs5ziVsFGznhfhZRsr7RKZ2P54O1dFyB3s+WYKij7Nu4ENuaDbcZWKM6Ih5JndN5V5IAz31vX3EqtnvCamsv+B0/JrhLSBKao6HFUOZBvJBZiXWGViVRkcfYpPLtuf3kl6BH4lwKR5HF4ee09MiUgH92jaD/oJNNSAy6cI/w6WdD+zLZSm1X1kcKvd7ckYRncha5FstrjkpCNDeWeypEBNiAJDlE+X7zXngRpxYTgpBhXxv60Qe/dSaO28JDZX4UEC3X50BQQKCuG/PKV9EGQRo6zfJWs9N5CuuDNJ+tl1G4Ta883bk9+6BJa/viqYuJzk0/csp7RLRyHakqZTM7nUw8KPzU= vishnu@Ubuntu"
+          ]
+        },
+        "replicas": 1
+      },
+      "testkube-eu-north-1c": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a8ab5e0a29e8173",
+            "assignPublicIP": true,
+            "availabilityZone": "eu-north-1c",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "ebsVolumeEncrypted": false,
+            "instanceProfile": "testkube-host",
+            "instanceType": "t3.medium",
+            "isSpotInstance": false,
+            "region": "eu-north-1",
+            "securityGroupIDs": [
+              "sg-0c7dec83f010dd08a"
+            ],
+            "subnetId": "subnet-0ed04a4083e2c2ed2",
+            "tags": {
+              "testkube-workers": ""
+            },
+            "vpcId": "vpc-d35dcbba"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWy58J+rzhdUMYSIrmfcgYG0Jaj+bU2EilfErMKcRYOTogNvb42YUWMXp6QtGL+4Jrc/YecHQ7yof8gThY/hjWZHln6ra2X5+cogAaFaemM99Damw/6Gq5hXYcYvR92E54GjSqhbGpLsiqoDwgiyCqDrtWsI+zbytOP5Mcs5ziVsFGznhfhZRsr7RKZ2P54O1dFyB3s+WYKij7Nu4ENuaDbcZWKM6Ih5JndN5V5IAz31vX3EqtnvCamsv+B0/JrhLSBKao6HFUOZBvJBZiXWGViVRkcfYpPLtuf3kl6BH4lwKR5HF4ee09MiUgH92jaD/oJNNSAy6cI/w6WdD+zLZSm1X1kcKvd7ckYRncha5FstrjkpCNDeWeypEBNiAJDlE+X7zXngRpxYTgpBhXxv60Qe/dSaO28JDZX4UEC3X50BQQKCuG/PKV9EGQRo6zfJWs9N5CuuDNJ+tl1G4Ta883bk9+6BJa/viqYuJzk0/csp7RLRyHakqZTM7nUw8KPzU= vishnu@Ubuntu"
+          ]
+        },
+        "replicas": 1
+      }
+    }
+  },
+  "ssh_commands": {
+    "sensitive": false,
+    "type": [
+      "list",
+      "string"
+    ],
+    "value": [
+      "ssh -J ubuntu@13.51.171.156 ubuntu@172.31.201.55",
+      "ssh -J ubuntu@13.51.171.156 ubuntu@172.31.202.151",
+      "ssh -J ubuntu@13.51.171.156 ubuntu@172.31.203.104"
+    ]
+  }
+}
